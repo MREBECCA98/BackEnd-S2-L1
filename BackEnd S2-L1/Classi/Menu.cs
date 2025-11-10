@@ -47,13 +47,15 @@ namespace BackEnd_S2_L1.Classi
 
                 foreach (var piatto in ordine)
                 {
+                    Console.WriteLine("");
                     Console.WriteLine($"{piatto.NomePiatto} - {piatto.Prezzo} euro");
                     totale += piatto.Prezzo;
                 }
 
                 totale += 3;
 
-                Console.WriteLine($"Totale: {totale} euro");
+                Console.WriteLine("");
+                Console.WriteLine($"           Totale: {totale} euro");
 
                 return;
             }
@@ -64,6 +66,8 @@ namespace BackEnd_S2_L1.Classi
                 {
 
                     ordine.Add(piatto);
+
+                    Console.Clear();
                 }
             }
             MenuCompleto(); //metodo ricorsivo-- metodo che richiama se stesso
